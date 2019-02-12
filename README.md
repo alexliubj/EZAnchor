@@ -7,55 +7,55 @@ Are you annoyed of coding such long constraint sentence `refreshView.heightAncho
 Now `EZAnchor` is definitely going to shorten your time of writing Autolayout Anchors by a simple installation.
 Let's see how it works:
 
-//1. Anchor constraint to another anchor
+1. Anchor constraint to another anchor
 ```
 viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
 viewA.leading == self.view.leading
 ```
         
-//2. Anchor constraint to another anchor with constant
+2. Anchor constraint to another anchor with constant
 ```
 viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10).isActive = true
 viewA.leading == self.view.leading + 10
 ```
         
-//3.Anchor constraint to another anchor with negative constant
-```
+3.Anchor constraint to another anchor with negative constant
+```swift
 viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -10).isActive = true
 viewA.leading == self.view.leading - 10
 ```
         
-//4.Anchor lessThanOrEqualTo another anchor
-```
+4.Anchor lessThanOrEqualTo another anchor
+```swift
 viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor).isActive = true
 viewA.leading <= self.view.leading
 ```
         
-//5.Anchor greaterThanOrEqualTo another anchor
-```
+5.Anchor greaterThanOrEqualTo another anchor
+```swift
 viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor).isActive = true
 viewA.leading >= self.view.leading
 ```
         
-//6.Anchor lessThanOrEqualTo another anchor with constant
-```
+6.Anchor lessThanOrEqualTo another anchor with constant
+```swift
 viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
 viewA.leading <= self.view.leading + 10
 ```
         
-//7.Anchor greaterThanOrEqualTo another anchor with constant
-```
+7.Anchor greaterThanOrEqualTo another anchor with constant
+```swift
 viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
 viewA.leading >= self.view.leading - 10
 ```
         
-//8.Anchor equalTo another anchor with constant and multiplier
-```
+8.Anchor equalTo another anchor with constant and multiplier
+```swift
 viewA.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1, constant: -10).isActive = true
 viewA.height == self.view.height * 0.1 - 10
 ```
 
-//9. Work with Priority
+9.Work with Priority
 `viewA.leading == (self.view.leading + 0.1) ^ UILayoutPriority.defaultLow`
 
 # Installation
