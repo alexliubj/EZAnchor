@@ -69,7 +69,11 @@ Directly drag `EZAnchor` and drop into your Xcode project.
 
 ### CocoaPods
 To integrate EZAnchor into your Xcode project using CocoaPods, specify it in your Podfile:
-`coming soon`
+```
+target 'MyApp' do
+  pod 'EZAnchor', '~> 0.0'
+end
+```
 
 ### Carthage
 To integrate EZAnchor into your Xcode project using Carthage, specify it in your Cartfile:
