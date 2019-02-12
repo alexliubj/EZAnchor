@@ -90,13 +90,8 @@ Run carthage update to build the framework and drag the built EZAnchor.framework
 ## Other helpful tools
 ##### [WTF Autolayout](https://www.wtfautolayout.com) will help you debug autolayout complaints.
 ##### Logo is generated with [Shopify logo maker](https://hatchful.shopify.com/)
-##### Inspired by: 
-[PureLayout](https://github.com/PureLayout/PureLayout) 
-[Stevia](https://github.com/freshOS/Stevia) 
-[layout](https://github.com/nicklockwood/layout) 
+##### Inspired by: [PureLayout](https://github.com/PureLayout/PureLayout) [Stevia](https://github.com/freshOS/Stevia) [layout](https://github.com/nicklockwood/layout) 
 
 ## License
 
 This code and tool is under the MIT License. 
-
-
