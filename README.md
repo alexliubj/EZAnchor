@@ -1,6 +1,8 @@
 # EZAnchor
 An easier way to code Autolayout
 
+![Image of EZAnchor](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/Logo.png)
+
 Are you annoyed of coding `.active = true` while using Autolayout Anchors over and over again?
 Are you annoyed of coding such long constraint sentence `refreshView.heightAnchor.constraint(equalToConstant: self.refreshViewHeight).isActive = true` over and over again?
 
