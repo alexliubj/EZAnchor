@@ -98,10 +98,10 @@ Run carthage update to build the framework and drag the built EZAnchor.framework
 ##### Inspired by: [PureLayout](https://github.com/PureLayout/PureLayout) [Stevia](https://github.com/freshOS/Stevia) [layout](https://github.com/nicklockwood/layout) 
 
 ## Todo
-- [] Unit tests
-- [] UI Tests
-- CI
-- Fastlane
+- [ ] Unit tests
+- [ ] UI Tests
+- [ ] CI
+- [ ] Fastlane
 
 ## License
 
