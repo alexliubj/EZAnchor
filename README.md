@@ -4,9 +4,9 @@ An easier way to code Autolayout
 ![Image of EZAnchor](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/Logo.png)
 
 [![Language: Swift 4](https://img.shields.io/badge/language-swift%204-f48041.svg?style=flat)](https://developer.apple.com/swift)
-![Platform: iOS 9+](https://img.shields.io/badge/platform-iOS%20|%20tvOS-blue.svg?style=flat)
+![Platform: iOS 9+](https://img.shields.io/badge/platform-iOS%20.svg?style=flat)
 [![CocoaPods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/SteviaLayout)
-[![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)]
+[![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
 
 - [x] Are you annoyed of coding `.active = true` while using Autolayout Anchors over and over again?
 - [x] Are you annoyed of coding such long constraint sentence `refreshView.heightAnchor.constraint(equalToConstant: self.refreshViewHeight).isActive = true` over and over again?
