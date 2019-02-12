@@ -16,55 +16,78 @@ Let's see how it works:
 
 * Anchor constraint to another anchor
 ```swift
-viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-viewA.leading == self.view.leading
+//Traditional way
+viewA.leadingAnchor.constraint(equalTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading == viewB.leading
 ```
         
 * Anchor constraint to another anchor with constant
 ```swift
+//Traditional way
 viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
 viewA.leading == self.view.leading + 10
 ```
         
 * Anchor constraint to another anchor with negative constant
 ```swift
-viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -10).isActive = true
-viewA.leading == self.view.leading - 10
+//Traditional way
+viewA.leadingAnchor.constraint(equalTo: viewB.leadingAnchor, constant: -10).isActive = true
+
+//With EZAnchor
+viewA.leading == viewB.leading - 10
 ```
         
 * Anchor lessThanOrEqualTo another anchor
 ```swift
-viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor).isActive = true
-viewA.leading <= self.view.leading
+//Traditional way
+viewA.leadingAnchor.constraint(lessThanOrEqualTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading <= viewB.leading
 ```
         
 * Anchor greaterThanOrEqualTo another anchor
 ```swift
-viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor).isActive = true
-viewA.leading >= self.view.leading
+viewA.leadingAnchor.constraint(greaterThanOrEqualTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading >= viewB.leading
 ```
         
 * Anchor lessThanOrEqualTo another anchor with constant
 ```swift
-viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
-viewA.leading <= self.view.leading + 10
+viewA.leadingAnchor.constraint(lessThanOrEqualTo: viewB.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
+viewA.leading <= viewB.leading + 10
 ```
         
 * Anchor greaterThanOrEqualTo another anchor with constant
 ```swift
-viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
-viewA.leading >= self.view.leading - 10
+//Traditional way
+viewA.leadingAnchor.constraint(greaterThanOrEqualTo: viewB.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
+viewA.leading >= viewB.leading - 10
 ```
         
 * Anchor equalTo another anchor with constant and multiplier
 ```swift
-viewA.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1, constant: -10).isActive = true
-viewA.height == self.view.height * 0.1 - 10
+//Traditional way
+viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: 0.1, constant: -10).isActive = true
+
+//With EZAnchor
+viewA.height == viewB.height * 0.1 - 10
 ```
 
 * Work with Priority
 ```swift
-viewA.leading == (self.view.leading + 0.1) ^ UILayoutPriority.defaultLow
+//With EZAnchor
+viewA.leading == (viewB.leading + 0.1) ^ .defaultLow
 ```
 
 ## Installation
