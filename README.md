@@ -84,12 +84,12 @@ Run carthage update to build the framework and drag the built EZAnchor.framework
 2. Avoid defining custom `UIControl` or view has same name with `height` or `width`, there may have conflict with `EZAnchor` library
 
 ## Other helpful tools
-[WTF Autolayout](https://www.wtfautolayout.com) will help you debug autolayout complaints.
-Logo is generated with [Shopify logo maker](https://hatchful.shopify.com/)
-Inspired by: 
-[PureLayout](https://github.com/PureLayout/PureLayout)
-[Stevia](https://github.com/freshOS/Stevia)
-[layout](https://github.com/nicklockwood/layout)
+##### [WTF Autolayout](https://www.wtfautolayout.com) will help you debug autolayout complaints.
+##### Logo is generated with [Shopify logo maker](https://hatchful.shopify.com/)
+##### Inspired by: 
+###### [PureLayout](https://github.com/PureLayout/PureLayout)
+###### [Stevia](https://github.com/freshOS/Stevia)
+###### [layout](https://github.com/nicklockwood/layout)
 
 ## License
 
