@@ -60,31 +60,31 @@ viewA.height == self.view.height * 0.1 - 10
 viewA.leading == (self.view.leading + 0.1) ^ UILayoutPriority.defaultLow
 ```
 
-# Installation
+## Installation
 
-## Drag and drop
+### Drag and drop
 Directly drag `EZAnchor` and drop into your Xcode project.
 
-## CocoaPods
+### CocoaPods
 To integrate EZAnchor into your Xcode project using CocoaPods, specify it in your Podfile:
 `coming soon`
 
-## Carthage
+### Carthage
 To integrate EZAnchor into your Xcode project using Carthage, specify it in your Cartfile:
 `coming soon`
 
 Run carthage update to build the framework and drag the built EZAnchor.framework into your Xcode project.
 
-# Limitations
+## Limitations
 
 1. Better to have some basic concept of anchors, familiar with coding anchors programmatically. If not please learn from this link : [Programmatically Creating Constraints!](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)
 
 2. Avoid defining custom `UIControl` or view has same name with `height` or `width`, there may have conflict with `EZAnchor` library
 
-# Other helpful tools
+## Other helpful tools
 [WTF Autolayout](https://www.wtfautolayout.com) will help you debug autolayout complaints.
 
-# License
+## License
 
 This code and tool is under the MIT License. 
 
