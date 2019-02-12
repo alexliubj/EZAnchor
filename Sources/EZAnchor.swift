@@ -28,69 +28,55 @@ import UIKit
 
 extension UIView {
     
-    @available(iOS 9.0, *)
     open var leading: EZLayoutXAxisAnchor {
         return EZLayoutXAxisAnchor(anchor: leadingAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var trailing: EZLayoutXAxisAnchor {
         return EZLayoutXAxisAnchor(anchor: trailingAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var left: EZLayoutXAxisAnchor {
         return EZLayoutXAxisAnchor(anchor: leftAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var right: EZLayoutXAxisAnchor {
         return EZLayoutXAxisAnchor(anchor: rightAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var top: EZLayoutYAxisAnchor {
         return EZLayoutYAxisAnchor(anchor: topAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var bottom: EZLayoutYAxisAnchor {
         return EZLayoutYAxisAnchor(anchor: bottomAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var width: EZLayoutDimension {
         return EZLayoutDimension(anchor: widthAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var height: EZLayoutDimension {
         return EZLayoutDimension(anchor: heightAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var centerX: EZLayoutXAxisAnchor {
         return EZLayoutXAxisAnchor(anchor: centerXAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var centerY: EZLayoutYAxisAnchor {
         return EZLayoutYAxisAnchor(anchor: centerYAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var firstBaseline: EZLayoutYAxisAnchor {
         return EZLayoutYAxisAnchor(anchor: firstBaselineAnchor)
     }
     
-    @available(iOS 9.0, *)
     open var lastBaseline: EZLayoutYAxisAnchor {
         return EZLayoutYAxisAnchor(anchor: lastBaselineAnchor)
     }
 }
 
-
-@available(iOS 9.0, *)
 extension NSLayoutAnchor{
     
     @discardableResult
@@ -249,7 +235,6 @@ extension NSLayoutDimension{
     }
 }
 
-@available(iOS 9.0, *)
 public struct EZLayoutYAxisAnchor {
     let anchor: NSLayoutYAxisAnchor
     let constant: CGFloat
@@ -264,7 +249,6 @@ public struct EZLayoutYAxisAnchor {
     }
 }
 
-@available(iOS 9.0, *)
 public struct EZLayoutXAxisAnchor {
     let anchor: NSLayoutXAxisAnchor
     let constant: CGFloat
@@ -279,7 +263,6 @@ public struct EZLayoutXAxisAnchor {
     }
 }
 
-@available(iOS 9.0, *)
 public struct EZLayoutDimension {
     let anchor: NSLayoutDimension
     let constant: CGFloat
@@ -296,19 +279,16 @@ public struct EZLayoutDimension {
 
 // MARK: Operators on EZLayoutYAxisAnchor
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: EZLayoutXAxisAnchor, right: EZLayoutXAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(equalTo: right.anchor, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: EZLayoutXAxisAnchor, right: EZLayoutXAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(greaterThanOrEqualTo: right.anchor, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: EZLayoutXAxisAnchor, right: EZLayoutXAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(lessThanOrEqualTo: right.anchor, constant: right.constant)
@@ -320,7 +300,6 @@ public func + (left: EZLayoutXAxisAnchor, right: CGFloat) -> EZLayoutXAxisAnchor
     return EZLayoutXAxisAnchor(anchor: left.anchor, constant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func - (left: EZLayoutXAxisAnchor, right: CGFloat) -> EZLayoutXAxisAnchor {
     return EZLayoutXAxisAnchor(anchor: left.anchor, constant: -right)
@@ -328,31 +307,26 @@ public func - (left: EZLayoutXAxisAnchor, right: CGFloat) -> EZLayoutXAxisAnchor
 
 // MARK: Operators on EZLayoutYAxisAnchor
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: EZLayoutYAxisAnchor, right: EZLayoutYAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(equalTo: right.anchor, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: EZLayoutYAxisAnchor, right: EZLayoutYAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(greaterThanOrEqualTo: right.anchor, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: EZLayoutYAxisAnchor, right: EZLayoutYAxisAnchor) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(lessThanOrEqualTo: right.anchor, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func + (left: EZLayoutYAxisAnchor, right: CGFloat) -> EZLayoutYAxisAnchor {
     return EZLayoutYAxisAnchor(anchor: left.anchor, constant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func - (left: EZLayoutYAxisAnchor, right: CGFloat) -> EZLayoutYAxisAnchor {
     return EZLayoutYAxisAnchor(anchor: left.anchor, constant: -right)
@@ -360,49 +334,41 @@ public func - (left: EZLayoutYAxisAnchor, right: CGFloat) -> EZLayoutYAxisAnchor
 
 // MARK: Operators on system NSLayoutDimension and a constant
 
-@available(iOS 9.0, *)
 @discardableResult
 public func * (left: NSLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left, multiplier: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func * (left: EZLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, multiplier: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func / (left: NSLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left, multiplier: 1/right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func / (left: EZLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, multiplier: 1/right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func + (left: NSLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left, constant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func + (left: EZLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, constant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func - (left: EZLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, constant: -right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func - (left: NSLayoutDimension, right: CGFloat) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left, constant: -right)
@@ -410,19 +376,16 @@ public func - (left: NSLayoutDimension, right: CGFloat) -> EZLayoutDimension {
 
 // MARK: Operators on system NSLayoutDimension and customed ones
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: NSLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(equalTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: NSLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(greaterThanOrEqualTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: NSLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(lessThanOrEqualTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
@@ -430,19 +393,16 @@ public func <= (left: NSLayoutDimension, right: EZLayoutDimension) -> NSLayoutCo
 
 // MARK: Operators between two NSLayoutDimension
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: NSLayoutDimension, right: NSLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(equalTo: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: NSLayoutDimension, right: NSLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(greaterThanOrEqualTo: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: NSLayoutDimension, right: NSLayoutDimension) -> NSLayoutConstraint {
     return left.activeConstraint(lessThanOrEqualTo: right)
@@ -450,19 +410,16 @@ public func <= (left: NSLayoutDimension, right: NSLayoutDimension) -> NSLayoutCo
 
 // MARK: Operators on height and a constant
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: EZLayoutDimension, right: CGFloat) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(equalToConstant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: EZLayoutDimension, right: CGFloat) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(greaterThanOrEqualToConstant: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: EZLayoutDimension, right: CGFloat) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(lessThanOrEqualToConstant: right)
@@ -470,19 +427,16 @@ public func <= (left: EZLayoutDimension, right: CGFloat) -> NSLayoutConstraint {
 
 // MARK: operators between EZLayoutDimension
 
-@available(iOS 9.0, *)
 @discardableResult
 public func == (left: EZLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(equalTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func >= (left: EZLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(greaterThanOrEqualTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func <= (left: EZLayoutDimension, right: EZLayoutDimension) -> NSLayoutConstraint {
     return left.anchor.activeConstraint(lessThanOrEqualTo: right.anchor, multiplier: right.multiplier, constant: right.constant)
@@ -498,19 +452,16 @@ precedencegroup PriorityPrecedence {
 
 infix operator ^: PriorityPrecedence
 
-@available(iOS 9.0, *)
 @discardableResult
 public func ^ (left: EZLayoutXAxisAnchor, right: UILayoutPriority) -> EZLayoutXAxisAnchor {
     return EZLayoutXAxisAnchor(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func ^ (left: EZLayoutYAxisAnchor, right: UILayoutPriority) -> EZLayoutYAxisAnchor {
     return EZLayoutYAxisAnchor(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
 }
 
-@available(iOS 9.0, *)
 @discardableResult
 public func ^ (left: EZLayoutDimension, right: UILayoutPriority) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
