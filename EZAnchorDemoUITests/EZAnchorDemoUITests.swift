@@ -1,6 +1,6 @@
 //
-//  EZAnchorUITests.swift
-//  EZAnchorUITests
+//  EZAnchorDemoUITests.swift
+//  EZAnchorDemoUITests
 //
 //  Created by Alex Liu on 2019-02-12.
 //  Copyright © 2019 Alex Liu. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class EZAnchorUITests: XCTestCase {
+class EZAnchorDemoUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

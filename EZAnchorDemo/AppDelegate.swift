@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  EZAnchor
+//  EZAnchorDemo
 //
 //  Created by Alex Liu on 2019-02-12.
 //  Copyright © 2019 Alex Liu. All rights reserved.

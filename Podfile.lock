@@ -1,0 +1,16 @@
+PODS:
+  - EZAnchor (0.0.1)
+
+DEPENDENCIES:
+  - EZAnchor
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EZAnchor
+
+SPEC CHECKSUMS:
+  EZAnchor: b6b85e9e277a6b0c32d5708aa2d197f94cf22252
+
+PODFILE CHECKSUM: 540ebbd48eed43c65b3c41861d9a650f26937e08
+
+COCOAPODS: 1.5.3
