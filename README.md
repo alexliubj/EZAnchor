@@ -121,10 +121,10 @@ viewA.centerX == view.centerX
 viewA.centerY == view.centerY
 
 //set viewB's layout constraints
-viewA.width == 200
-viewA.width == viewA.height
-viewA.centerX == view.centerX
-viewA.centerY == view.centerY
+viewB.top == viewA.bottom + 20
+viewB.width == viewA.width * 0.5
+viewB.height == viewB.width - 10
+viewB.centerX == viewA.centerX
         
 ```
 ![Image of DemoScreenshot](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/demo.png)
