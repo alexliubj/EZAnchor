@@ -3,6 +3,11 @@ An easier way to code Autolayout
 
 ![Image of EZAnchor](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/Logo.png)
 
+[![Language: Swift 4](https://img.shields.io/badge/language-swift%204-f48041.svg?style=flat)](https://developer.apple.com/swift)
+![Platform: iOS 9+](https://img.shields.io/badge/platform-iOS-green.svg?style=flat)
+[![CocoaPods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/pods/SteviaLayout)
+![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
+
 - [x] Are you annoyed of coding `.active = true` while using Autolayout Anchors over and over again?
 - [x] Are you annoyed of coding such long constraint sentence `refreshView.heightAnchor.constraint(equalToConstant: self.refreshViewHeight).isActive = true` over and over again?
 
@@ -11,55 +16,78 @@ Let's see how it works:
 
 * Anchor constraint to another anchor
 ```swift
-viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-viewA.leading == self.view.leading
+//Traditional way
+viewA.leadingAnchor.constraint(equalTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading == viewB.leading
 ```
         
 * Anchor constraint to another anchor with constant
 ```swift
+//Traditional way
 viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
 viewA.leading == self.view.leading + 10
 ```
         
 * Anchor constraint to another anchor with negative constant
 ```swift
-viewA.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -10).isActive = true
-viewA.leading == self.view.leading - 10
+//Traditional way
+viewA.leadingAnchor.constraint(equalTo: viewB.leadingAnchor, constant: -10).isActive = true
+
+//With EZAnchor
+viewA.leading == viewB.leading - 10
 ```
         
 * Anchor lessThanOrEqualTo another anchor
 ```swift
-viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor).isActive = true
-viewA.leading <= self.view.leading
+//Traditional way
+viewA.leadingAnchor.constraint(lessThanOrEqualTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading <= viewB.leading
 ```
         
 * Anchor greaterThanOrEqualTo another anchor
 ```swift
-viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor).isActive = true
-viewA.leading >= self.view.leading
+viewA.leadingAnchor.constraint(greaterThanOrEqualTo: viewB.leadingAnchor).isActive = true
+
+//With EZAnchor
+viewA.leading >= viewB.leading
 ```
         
 * Anchor lessThanOrEqualTo another anchor with constant
 ```swift
-viewA.leadingAnchor.constraint(lessThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
-viewA.leading <= self.view.leading + 10
+viewA.leadingAnchor.constraint(lessThanOrEqualTo: viewB.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
+viewA.leading <= viewB.leading + 10
 ```
         
 * Anchor greaterThanOrEqualTo another anchor with constant
 ```swift
-viewA.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor, constant: 10).isActive = true
-viewA.leading >= self.view.leading - 10
+//Traditional way
+viewA.leadingAnchor.constraint(greaterThanOrEqualTo: viewB.leadingAnchor, constant: 10).isActive = true
+
+//With EZAnchor
+viewA.leading >= viewB.leading - 10
 ```
         
 * Anchor equalTo another anchor with constant and multiplier
 ```swift
-viewA.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1, constant: -10).isActive = true
-viewA.height == self.view.height * 0.1 - 10
+//Traditional way
+viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: 0.1, constant: -10).isActive = true
+
+//With EZAnchor
+viewA.height == viewB.height * 0.1 - 10
 ```
 
 * Work with Priority
 ```swift
-viewA.leading == (self.view.leading + 0.1) ^ UILayoutPriority.defaultLow
+//With EZAnchor
+viewA.leading == (viewB.leading + 0.1) ^ .defaultLow
 ```
 
 ## Installation
@@ -69,7 +97,11 @@ Directly drag `EZAnchor` and drop into your Xcode project.
 
 ### CocoaPods
 To integrate EZAnchor into your Xcode project using CocoaPods, specify it in your Podfile:
-`coming soon`
+```
+target 'MyApp' do
+  pod 'EZAnchor'
+end
+```
 
 ### Carthage
 To integrate EZAnchor into your Xcode project using Carthage, specify it in your Cartfile:
@@ -83,16 +115,17 @@ Run carthage update to build the framework and drag the built EZAnchor.framework
 
 2. Avoid defining custom `UIControl` or view has same name with `height` or `width`, there may have conflict with `EZAnchor` library
 
-## Other helpful tools
+## Others
 ##### [WTF Autolayout](https://www.wtfautolayout.com) will help you debug autolayout complaints.
 ##### Logo is generated with [Shopify logo maker](https://hatchful.shopify.com/)
-##### Inspired by: 
-[PureLayout](https://github.com/PureLayout/PureLayout) 
-[Stevia](https://github.com/freshOS/Stevia) 
-[layout](https://github.com/nicklockwood/layout) 
+##### Inspired by: [PureLayout](https://github.com/PureLayout/PureLayout) [Stevia](https://github.com/freshOS/Stevia) [layout](https://github.com/nicklockwood/layout) 
+
+## Todo
+- [ ] Unit tests
+- [ ] UI Tests
+- [ ] CI
+- [ ] Fastlane
 
 ## License
 
 This code and tool is under the MIT License. 
-
-
