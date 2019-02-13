@@ -109,6 +109,26 @@ To integrate EZAnchor into your Xcode project using Carthage, specify it in your
 
 Run carthage update to build the framework and drag the built EZAnchor.framework into your Xcode project.
 
+## Demo
+
+You can easily implement the following layout with very simple and clean code:
+```swift
+//set viewA's layout constraints
+viewA.backgroundColor = UIColor.red
+viewA.width == 200
+viewA.width == viewA.height
+viewA.centerX == view.centerX
+viewA.centerY == view.centerY
+
+//set viewB's layout constraints
+viewA.width == 200
+viewA.width == viewA.height
+viewA.centerX == view.centerX
+viewA.centerY == view.centerY
+        
+```
+![Image of DemoScreenshot](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/demo.png)
+
 ## Limitations
 
 1. Better to have some basic concept of anchors, familiar with coding anchors programmatically. If not please learn from this link : [Programmatically Creating Constraints!](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)
