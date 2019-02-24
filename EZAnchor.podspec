@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EZAnchor"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "An easier way to code Autolayout."
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    An easier way to code Autolayout
+                    An easier, faster and neater way to code Autolayout
                     * Are you annoyed of coding `.active = true` while using Autolayout Anchors over and over again?
                     * Are you annoyed of coding such long constraint sentence `refreshView.heightAnchor.constraint(equalToConstant: self.refreshViewHeight).isActive = true` over and over again?
                     * Check the following elegant way to code Autolayout:

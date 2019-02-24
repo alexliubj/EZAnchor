@@ -7,32 +7,40 @@
 //
 
 import UIKit
-import EZAnchor
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let viewA = UIView()
-        viewA.translatesAutoresizingMaskIntoConstraints = false
-        viewA.backgroundColor = UIColor.red
-        view.addSubview(viewA)
         
-        viewA.width == 200
-        viewA.width == viewA.height
+        let viewA = UIView()
+        viewA.backgroundColor = UIColor.red
+        view.addEZSubview(viewA)
+        
+        viewA.leading == view.leading + 5
+        viewA.trailing == view.trailing - 5
+        viewA.top == view.top + 15
         viewA.centerX == view.centerX
-        viewA.centerY == view.centerY
+        viewA.height == view.height/2
         
         let viewB = UIView()
         viewB.backgroundColor = UIColor.yellow
-        viewB.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(viewB)
+        view.addEZSubview(viewB)
         
-        viewB.top == viewA.bottom + 20
-        viewB.width == viewA.width * 0.5
-        viewB.height == viewB.width - 10
-        viewB.centerX == viewA.centerX
+        viewB.top == viewA.bottom + 5
+        viewB.leading == viewA.leading
+        viewB.bottom == view.bottom - 5
+        viewB.trailing == view.centerX - 5
+        
+        let viewC = UIView()
+        viewC.backgroundColor = UIColor.green
+        view.addEZSubview(viewC)
+        
+        viewC.top == viewB.top
+        viewC.bottom == viewB.bottom
+        viewC.leading == view.centerX + 5
+        viewC.trailing == viewA.trailing
     }
 }
+
 

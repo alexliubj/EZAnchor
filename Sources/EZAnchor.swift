@@ -77,6 +77,198 @@ extension UIView {
     }
 }
 
+extension UIView {
+    
+    @discardableResult
+    public func setLeft(_ ez: EZLayoutXAxisAnchor) -> Self {
+        left.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setLeft(greaterThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        left.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setLeft(lessThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        left.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setRight(_ ez: EZLayoutXAxisAnchor) -> Self {
+        right.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setRight(greaterThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        right.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setRight(lessThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        right.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setLeading(_ ez: EZLayoutXAxisAnchor) -> Self {
+        leading.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setLeading(greaterThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        leading.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setLeading(lessThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        leading.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTrailing(_ ez: EZLayoutXAxisAnchor) -> Self {
+        trailing.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTrailing(greaterThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        trailing.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTrailing(lessThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        trailing.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTop(_ ez: EZLayoutYAxisAnchor) -> Self {
+        top.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTop(greaterThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        top.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setTop(lessThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        top.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setBottom(_ ez: EZLayoutYAxisAnchor) -> Self {
+        bottom.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setBottom(greaterThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        bottom.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setBottom(lessThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        bottom.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterX(_ ez: EZLayoutXAxisAnchor) -> Self {
+        centerX.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterX(greaterThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        centerX.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterX(lessThanOrEqualTo ez: EZLayoutXAxisAnchor) -> Self {
+        centerX.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterY(_ ez: EZLayoutYAxisAnchor) -> Self {
+        centerY.anchor.activeConstraint(equalTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterY(greaterThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        centerY.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setCenterY(lessThanOrEqualTo ez: EZLayoutYAxisAnchor) -> Self {
+        centerY.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setWidth(_ ez: EZLayoutDimension) -> Self {
+        width.anchor.activeConstraint(equalTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setWidth(greaterThanOrEqualTo ez: EZLayoutDimension) -> Self {
+        width.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setWidth(lessThanOrEqualTo ez: EZLayoutDimension) -> Self {
+        width.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setHeight(_ ez: EZLayoutDimension) -> Self {
+        height.anchor.activeConstraint(equalTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setHeight(greaterThanOrEqualTo ez: EZLayoutDimension) -> Self {
+        height.anchor.activeConstraint(greaterThanOrEqualTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+    
+    @discardableResult
+    public func setHeight(lessThanOrEqualTo ez: EZLayoutDimension) -> Self {
+        height.anchor.activeConstraint(lessThanOrEqualTo: ez.anchor, multiplier: ez.multiplier, constant: ez.constant)
+        return self
+    }
+}
+
+extension UIView {
+    func addEZSubview(_ views: UIView...) {
+        views.forEach { view in
+            view.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(view)
+        }
+    }
+}
+
 extension NSLayoutAnchor{
     
     @discardableResult
@@ -86,30 +278,35 @@ extension NSLayoutAnchor{
         return c
     }
     
+    @discardableResult
     @objc func activeConstraint(greaterThanOrEqualTo anchor: NSLayoutAnchor) -> NSLayoutConstraint {
         let c =  self.constraint(greaterThanOrEqualTo: anchor)
         c.isActive = true
         return c
     }
     
+    @discardableResult
     @objc func activeConstraint(lessThanOrEqualTo anchor: NSLayoutAnchor) -> NSLayoutConstraint {
         let c = self.constraint(lessThanOrEqualTo: anchor)
         c.isActive = true
         return c
     }
     
+    @discardableResult
     @objc func activeConstraint(equalTo anchor: NSLayoutAnchor<AnchorType>, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalTo: anchor, constant: c)
         c.isActive = true
         return c
     }
     
+    @discardableResult
     @objc func activeConstraint(greaterThanOrEqualTo anchor: NSLayoutAnchor<AnchorType>, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(greaterThanOrEqualTo: anchor, constant: c)
         c.isActive = true
         return c
     }
     
+    @discardableResult
     @objc func activeConstraint(lessThanOrEqualTo anchor: NSLayoutAnchor<AnchorType>, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(lessThanOrEqualTo: anchor, constant: c)
         c.isActive = true
@@ -172,6 +369,7 @@ extension NSLayoutYAxisAnchor {
 extension NSLayoutDimension{
     
     // ==
+    @discardableResult
     @objc func activeConstraint(equalToConstant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalToConstant: c)
         c.isActive = true
@@ -179,6 +377,7 @@ extension NSLayoutDimension{
     }
     
     //>= +
+    @discardableResult
     @objc func activeConstraint(greaterThanOrEqualToConstant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(greaterThanOrEqualToConstant: c)
         c.isActive = true
@@ -186,6 +385,7 @@ extension NSLayoutDimension{
     }
     
     //<= +
+    @discardableResult
     @objc func activeConstraint(lessThanOrEqualToConstant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(lessThanOrEqualToConstant: c)
         c.isActive = true
@@ -193,6 +393,7 @@ extension NSLayoutDimension{
     }
     
     //== *
+    @discardableResult
     @objc func activeConstraint(equalTo anchor: NSLayoutDimension, multiplier m: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalTo: anchor, multiplier: m)
         c.isActive = true
@@ -200,6 +401,7 @@ extension NSLayoutDimension{
     }
     
     //>= *
+    @discardableResult
     @objc func activeConstraint(greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier m: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(greaterThanOrEqualTo: anchor, multiplier: m)
         c.isActive = true
@@ -207,6 +409,7 @@ extension NSLayoutDimension{
     }
     
     //<= * +
+    @discardableResult
     @objc func activeConstraint(lessThanOrEqualTo anchor: NSLayoutDimension, multiplier m: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(lessThanOrEqualTo: anchor, multiplier: m)
         c.isActive = true
@@ -214,6 +417,7 @@ extension NSLayoutDimension{
     }
     
     //== * +
+    @discardableResult
     @objc func activeConstraint(equalTo anchor: NSLayoutDimension, multiplier m: CGFloat, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalTo: anchor, multiplier: m, constant: c)
         c.isActive = true
@@ -221,6 +425,7 @@ extension NSLayoutDimension{
     }
     
     //>= * +
+    @discardableResult
     @objc func activeConstraint(greaterThanOrEqualTo anchor: NSLayoutDimension, multiplier m: CGFloat, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalTo: anchor, multiplier: m, constant: c)
         c.isActive = true
@@ -228,6 +433,7 @@ extension NSLayoutDimension{
     }
     
     //<= * +
+    @discardableResult
     @objc func activeConstraint(lessThanOrEqualTo anchor: NSLayoutDimension, multiplier m: CGFloat, constant c: CGFloat) -> NSLayoutConstraint {
         let c = self.constraint(equalTo: anchor, multiplier: m, constant: c)
         c.isActive = true
@@ -450,19 +656,20 @@ precedencegroup PriorityPrecedence {
     lowerThan: AdditionPrecedence
 }
 
-infix operator ^: PriorityPrecedence
+infix operator ~: PriorityPrecedence
 
 @discardableResult
-public func ^ (left: EZLayoutXAxisAnchor, right: UILayoutPriority) -> EZLayoutXAxisAnchor {
+public func ~ (left: EZLayoutXAxisAnchor, right: UILayoutPriority) -> EZLayoutXAxisAnchor {
     return EZLayoutXAxisAnchor(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
 }
 
 @discardableResult
-public func ^ (left: EZLayoutYAxisAnchor, right: UILayoutPriority) -> EZLayoutYAxisAnchor {
+public func ~ (left: EZLayoutYAxisAnchor, right: UILayoutPriority) -> EZLayoutYAxisAnchor {
     return EZLayoutYAxisAnchor(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
 }
 
 @discardableResult
-public func ^ (left: EZLayoutDimension, right: UILayoutPriority) -> EZLayoutDimension {
+public func ~ (left: EZLayoutDimension, right: UILayoutPriority) -> EZLayoutDimension {
     return EZLayoutDimension(anchor: left.anchor, constant: left.constant, multiplier: left.multiplier, priority: right)
 }
+
