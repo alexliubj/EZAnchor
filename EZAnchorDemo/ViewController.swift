@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZAnchor
 
 class ViewController: UIViewController {
 
