@@ -261,7 +261,7 @@ extension UIView {
 }
 
 extension UIView {
-    func addEZSubview(_ views: UIView...) {
+    public func addEZSubview(_ views: UIView...) {
         views.forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
             addSubview(view)

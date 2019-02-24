@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EZAnchor"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "An easier way to code Autolayout."
 
   # This description is used to generate tags and improve search results.
