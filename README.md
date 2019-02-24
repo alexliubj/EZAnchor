@@ -114,20 +114,63 @@ Run carthage update to build the framework and drag the built EZAnchor.framework
 You can easily implement the following layout with very simple and clean code:
 ```swift
 //set viewA's layout constraints
+let viewA = UIView()
 viewA.backgroundColor = UIColor.red
-viewA.width == 200
-viewA.width == viewA.height
+view.addEZSubview(viewA)
+        
+viewA.leading == view.leading + 5
+viewA.trailing == view.trailing - 5
+viewA.top == view.top + 15
 viewA.centerX == view.centerX
-viewA.centerY == view.centerY
-
+viewA.height == view.height/2
+        
 //set viewB's layout constraints
-viewB.top == viewA.bottom + 20
-viewB.width == viewA.width * 0.5
-viewB.height == viewB.width - 10
-viewB.centerX == viewA.centerX
+let viewB = UIView()
+viewB.backgroundColor = UIColor.yellow
+view.addEZSubview(viewB)
+        
+viewB.top == viewA.bottom + 5
+viewB.leading == viewA.leading
+viewB.bottom == view.bottom - 5
+viewB.trailing == view.centerX - 5
+
+//set viewC's layout constraints        
+let viewC = UIView()
+viewC.backgroundColor = UIColor.green
+view.addEZSubview(viewC)
+        
+viewC.top == viewB.top
+viewC.bottom == viewB.bottom
+viewC.leading == view.centerX + 5
+viewC.trailing == viewA.trailing
         
 ```
 ![Image of DemoScreenshot](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/demo.png)
+
+## Chaining function
+
+### Chaining way to code Autolayout with EZAnchor
+
+```swift
+
+viewA.setLeading(view.leading + 5)
+     .setTrailing(view.trailing - 5)
+     .setTop(view.top + 15)
+     .setCenterX(view.centerX)
+     .setHeight(view.height/2)
+
+
+viewB.setTop(viewA.bottom + 5)
+     .setLeading(viewA.leading)
+     .setBottom(view.bottom - 5)
+     .setTrailing(view.centerX - 5)
+
+viewC.setTop(viewB.top)
+     .setBottom(viewB.bottom)
+     .setLeading(view.centerX + 5)
+     .setTrailing(viewA.trailing)
+
+```
 
 ## Limitations
 

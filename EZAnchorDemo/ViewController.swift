@@ -10,7 +10,7 @@ import UIKit
 import EZAnchor
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +24,16 @@ class ViewController: UIViewController {
         viewA.centerX == view.centerX
         viewA.height == view.height/2
         
+        /*
+         //Chaining way
+         
+         viewA.setLeading(view.leading + 5)
+         .setTrailing(view.trailing - 5)
+         .setTop(view.top + 15)
+         .setCenterX(view.centerX)
+         .setHeight(view.height/2)
+         */
+        
         let viewB = UIView()
         viewB.backgroundColor = UIColor.yellow
         view.addEZSubview(viewB)
@@ -33,6 +43,15 @@ class ViewController: UIViewController {
         viewB.bottom == view.bottom - 5
         viewB.trailing == view.centerX - 5
         
+        /*
+         //Chaining way
+         
+         viewB.setTop(viewA.bottom + 5)
+         .setLeading(viewA.leading)
+         .setBottom(view.bottom - 5)
+         .setTrailing(view.centerX - 5)
+         */
+        
         let viewC = UIView()
         viewC.backgroundColor = UIColor.green
         view.addEZSubview(viewC)
@@ -41,7 +60,17 @@ class ViewController: UIViewController {
         viewC.bottom == viewB.bottom
         viewC.leading == view.centerX + 5
         viewC.trailing == viewA.trailing
+        
+        /*
+         //Chaining way
+         
+         viewC.setTop(viewB.top)
+         .setBottom(viewB.bottom)
+         .setLeading(view.centerX + 5)
+         .setTrailing(viewA.trailing)
+         */
     }
 }
+
 
 
