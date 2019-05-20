@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.white
+        
         let viewA = UIView()
         viewA.backgroundColor = UIColor.red
         view.addEZSubview(viewA)
