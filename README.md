@@ -1,4 +1,4 @@
-# EZAnchor
+# EZAnchor  [中文介绍] (https://github.com/alexliubj/EZAnchor/blob/master/README_zh-CN.md)
 An easier way to code Autolayout
 
 ![Image of EZAnchor](https://raw.githubusercontent.com/alexliubj/EZAnchor/master/Logo.png)
